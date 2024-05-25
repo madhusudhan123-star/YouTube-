@@ -47,47 +47,41 @@ const VideoDetail = () => {
   } = videoDetail || {};
 
   return (
-    <Box minHeight="95vh">
-      <Stack direction={{ xs: "column", md: "row" }}>
-        <Box flex={1}>
-          <Box sx={{ width: "100%", position: "sticky", top: "86px" }}>
+    <div className="min-h-screen">
+      <div className="flex sm:flex-col md:flex-row">
+        <div className="w-8/12">
+          <div className="xs:w-full">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
-              className="react-player"
+              className=""
               controls
             />
-            <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
+            <div className="text-black font-medium">
               {title}
-            </Typography>
-            <Stack
-              direction="row"
-              justifyContent="space-between"
-              sx={{ color: "#fff" }}
-              py={1}
-              px={2}
-            >
+            </div>
+            <div className="flex flex-row justify-between text-black">
               <Link to={`/channel/${channelId}`}>
-                <Typography variant={{ sm: "subtitle1", md: "h6" }} color="#fff">
+                <div className="text-black">
                   {channelTitle}
                   <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
-                </Typography>
+                </div>
               </Link>
-              <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+              <div className="flex flex-row gap-5 align-items-center">
+                <div className="opacity-70">
                   {parseInt(viewCount).toLocaleString()} views
-                </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                </div>
+                <div className="opacity-70">
                   {parseInt(likeCount).toLocaleString()} likes
-                </Typography>
-              </Stack>
-            </Stack>
-          </Box>
-        </Box>
-        <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-4/12">
           <MemoizedVideos videos={videos} direction="column" />
-        </Box>
-      </Stack>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 
