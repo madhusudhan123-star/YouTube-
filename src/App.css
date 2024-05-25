@@ -36,7 +36,14 @@ a {
 
 .react-player {
   height: 77vh !important;
-  width: 100%;
+  width: 100% !important;
+}
+
+@media screen and (min-width: 1000px) {  
+  .react-player {
+    height: 77vh !important;
+    width: 60vw !important;
+  }
 }
 
 .search-bar{
