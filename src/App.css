@@ -1,60 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.search-form {
-  transition: padding-left 0.3s ease, width 0.3s ease; /* Add transition properties */
-}
-
-.search {
-  outline: none;
-}
-
-.sidebar{
-  font-family: 'Roboto', 'Arial', sans-serif;
-}
-
-.search_icons{
-  border: 1px solid #ccc;
-  border-right: none;
-  height: 40.5px;
-  width: 40px;
-}
-.line{
-  width: 17px;
-  background-color: black;
-  height: 1px;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-right: 23px;
-}
-.wave-text {
-  position: relative;
-}
-
-.wave-text span:first-child { /* Target the first span (the text) */
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for wave effect */
-}
-
-.wave {
-  content: "";
-  position: absolute;
-  bottom: -2px; /* Adjust position from the bottom of the text */
-  left: 0;
-  width: 100%;
-  height: 5px; /* Adjust height of the wave */
-  background-color: black; /* Adjust color and opacity of the wave */
-  border-radius: 50% 50% 0 0; /* Creates the wave shape */
-}
-
-
-
-
-
-/*  border-y-2 h-10 w-10 relative*/
-
-/* 
 html,
 body {
   margin: 0;
@@ -93,7 +36,7 @@ a {
 
 .react-player {
   height: 77vh !important;
-  width: 100% !important;
+  width: 100%;
 }
 
 .search-bar{
@@ -142,4 +85,4 @@ a {
   .search-bar{
     width:200px;
   }
-} */
+}

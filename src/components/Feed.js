@@ -15,23 +15,29 @@ const Feed = () => {
   }, [selectedCategory]);
   
   return (
-    <div className="flex gap-3 ">
-      <div className="h-100vh w-40 rounded-lg bg-gray-50 2xl:block xl:block lg:block md:block sm:hidden xs:hidden">
+    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+      <Box
+        sx={{
+          height: { sx: "auto", md: "92vh" },
+          borderRight: "1px solid #3d3d3d",
+          px: { sx: 0, md: 2 },
+        }}
+      >
         <Sidebar
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <div className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff" }}>
+        <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff" }}>
           copyright
-        </div>
-      </div>
-        <div className="w-11/12">
-          <div  className="sidebar text-2xl" sx={{ color: "black" }}>
-            {selectedCategory} <span style={{ color: "#dadada" }}> Video </span>
-          </div>
-          <Videos videos={videos} />
-        </div>
-    </div>
+        </Typography>
+      </Box>
+      <Box p={2} sx={{ overflowY: "scroll", height: "90vh", flex: 2 }}>
+        <Typography variant="h4" fontWeight="bold" md={2} sx={{ color: "white" }}>
+          {selectedCategory} <span style={{ color: "#F31503" }}> Video </span>
+        </Typography>
+        <Videos videos={videos} />
+      </Box>
+    </Stack>
   );
 };
 
