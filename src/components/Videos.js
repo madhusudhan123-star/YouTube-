@@ -6,10 +6,11 @@ import Loader from './Loader';
 
 const Videos = ({videos}) => {
   return (
-    <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack direction="row" flexWrap="wrap" justifyContent="center" gap={2}>
       {videos.length   > 0 ? (
         videos.map((item, index) => (
-          <Box key={index}>
+          <Box key=
+          {index}>
             {<VideoCard video={item} />}
             {item.id.channelId && <ChannelCard channelDetails={item} />}
           </Box>
